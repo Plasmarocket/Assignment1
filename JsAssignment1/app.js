@@ -63,3 +63,17 @@ app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function () {
     debug('Express server listening on port ' + server.address().port);
 });
+
+
+app.get('/view/aboutMe', function (req, res, next) {
+    res.render(view, locals);
+});
+app.get('/view/Contact', function (req, res, next) {
+    res.render(view, locals);
+});
+app.get('/view/projects', function (req, res, next) {
+    res.render(view, locals);
+});
+app.get('/view/services', function (req, res, next) {
+    res.render(view, locals);
+});
